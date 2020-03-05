@@ -1,7 +1,6 @@
-# import sys
+import sys
 import z3
-# sys.path.append('/Users/thestlucas/Desktop/ProbLogic/parseR/')
-# from tools import parse_pddl
+sys.path.append('/Users/thestlucas/Desktop/ProbLogic/parseR/')
 
 from itertools import combinations
 import re

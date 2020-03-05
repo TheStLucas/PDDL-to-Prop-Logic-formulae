@@ -6,7 +6,6 @@ from z3 import *
 
 
 
-
 def main():
 	#Parse PDDL file and given horizon length:
 	path_domain1 = './original_domain.pddl'
@@ -37,7 +36,11 @@ def main():
 
 	F_1 = [F1_kb1, F2_kb1, F3_kb1, F4_kb1, F5_kb1, F6_kb1, F7_kb1, F8_kb1]
 	F_1 = [item for sublist in F_1 for item in sublist]
-	return KB = list(set(F_1))
+	KB = list(set(F_1))
+	
+	with open('KB.txt', 'w') as the_file:
+		for k in KB:
+			the_file.write(str(k)+' ')
 
 if __name__ == '__main__':
 	main()
